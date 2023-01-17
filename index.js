@@ -1,5 +1,5 @@
-const Notification = (props) => {
-const containerClassName = {`notification-container ${className}`}
+const Notification = props => {
+ const containerClassName = {`notification-container ${className}`}
 
   return (
     <div className={containerClassName}>
@@ -8,27 +8,28 @@ const containerClassName = {`notification-container ${className}`}
     </div>
   )
 }
-};
+}
 
 const element = (
   <div className="bg-container">
     <h1>Notifications</h1>
     <div>
-      <div class="primary">
+      <Notification className="danger"/>
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
         <p className="message">Information Message</p>
       </div>
-      <div className="success">
+     <Notification className="danger"/>
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
         <p className="message">Success Message</p>
       </div>
-      <div className="warning">
+      <Notification className="danger"/>
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
         <p className="message">Warning Message</p>
-      </div>
-      <div className="danger">
+      <Notification className="danger"/>
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
         <p className="message">Error Message</p>
-      </div>
     </div>
   </div>
+)
+
+ReactDOM.render(element, document.getElementById('root'))
