@@ -1,30 +1,34 @@
 const Notification = (props) => {
-  const { className, imageSrc, text } = props;
-  return <div className={`div ${imgSrc} ${className}`}>{text}</div>;
+const containerClassName = {`notification-container ${className}`}
+
+  return (
+    <div className={containerClassName}>
+      <img className="icon" src={iconUrl} />
+      <p className="message">{message}</p>
+    </div>
+  )
+}
 };
 
 const element = (
   <div className="bg-container">
     <h1>Notifications</h1>
     <div>
-      <Notification class="primary">
+      <div class="primary">
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
-        <p>Information Message</p>
-      </Notification>
-      <Notification className="success">
+        <p className="message">Information Message</p>
+      </div>
+      <div className="success">
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
-        <p>Success Message</p>
-      </Notification>
-      <Notification className="warning">
+        <p className="message">Success Message</p>
+      </div>
+      <div className="warning">
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
-        <p>Warning Message</p>
-      </Notification>
-      <Notification className="danger">
+        <p className="message">Warning Message</p>
+      </div>
+      <div className="danger">
         <img src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png" />
-        <p>Error Message</p>
-      </Notification>
+        <p className="message">Error Message</p>
+      </div>
     </div>
   </div>
-);
-
-ReactDOM.render(element, document.getElementById("root"));
